@@ -1,5 +1,6 @@
 use aoc_runner_derive::aoc;
 
+#[allow(unused)]
 fn print_matrix(m: &[i32], width: usize) {
     for line in m.chunks(width) {
         println!(

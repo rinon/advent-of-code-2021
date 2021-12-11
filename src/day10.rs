@@ -30,7 +30,7 @@ fn part1(input: &str) -> usize {
 fn part2(input: &str) -> usize {
     let mut scores: Vec<_> = input.lines().filter_map(|line| {
         let s = parse(line);
-        (match s {
+        match s {
             Ok(_) => None,
             Err(s) => {
                 Some(s.iter().rev().fold(0, |score, c| {
@@ -43,7 +43,7 @@ fn part2(input: &str) -> usize {
                     }) + score * 5
                 }))
             }
-        })
+        }
     }).collect();
     scores.sort();
     scores[scores.len() / 2]

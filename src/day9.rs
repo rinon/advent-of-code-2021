@@ -68,7 +68,6 @@ fn part2(input: &str) -> usize {
     }
     basins.sort_by_key(|basin| basin.len());
 
-    let mut total = 0;
     basins.iter().skip(basins.len() - 3).map(|b| b.len()).product()
 }
 
